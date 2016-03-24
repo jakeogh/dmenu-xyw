@@ -35,6 +35,7 @@ stest: stest.o
 clean:
 	@echo cleaning
 	@rm -f dmenu-xyw stest ${OBJ} dmenu-xyw-${VERSION}.tar.gz
+	@rm -f config.h
 
 dist: clean
 	@echo creating dist tarball
