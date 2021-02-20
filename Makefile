@@ -6,7 +6,7 @@ include config.mk
 SRC = drw.c dmenu-xyw.c stest.c util.c
 OBJ = $(SRC:.c=.o)
 
-all: options dmenu-xyw stest
+all: options dmenu-xyw
 
 options:
 	@echo dmenu-xyw build options:
