@@ -42,16 +42,17 @@ dist: clean
 
 install: all
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
-	cp -f dmenu-xyw dmenu-xyw_path dmenu-xyw_run stest $(DESTDIR)$(PREFIX)/bin
+#	cp -f dmenu-xyw dmenu-xyw_path dmenu-xyw_run stest $(DESTDIR)$(PREFIX)/bin
+	cp -f dmenu-xyw dmenu-xyw_path dmenu-xyw_run       $(DESTDIR)$(PREFIX)/bin
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/dmenu-xyw
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/dmenu-xyw_path
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/dmenu-xyw_run
-	chmod 755 $(DESTDIR)$(PREFIX)/bin/stest
+#	chmod 755 $(DESTDIR)$(PREFIX)/bin/stest
 	mkdir -p $(DESTDIR)$(MANPREFIX)/man1
 	sed "s/VERSION/$(VERSION)/g" < dmenu-xyw.1 > $(DESTDIR)$(MANPREFIX)/man1/dmenu-xyw.1
-	sed "s/VERSION/$(VERSION)/g" < stest.1 > $(DESTDIR)$(MANPREFIX)/man1/stest.1
+#	sed "s/VERSION/$(VERSION)/g" < stest.1 > $(DESTDIR)$(MANPREFIX)/man1/stest.1
 	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/dmenu-xyw.1
-	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/stest.1
+#	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/stest.1
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/dmenu-xyw\
