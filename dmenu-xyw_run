@@ -1,2 +1,2 @@
 #!/bin/sh
-dmenu_xyw_path | dmenu-xyw "$@" | ${SHELL:-"/bin/sh"} &
+dmenu-xyw_path | dmenu-xyw "$@" | ${SHELL:-"/bin/sh"} &
